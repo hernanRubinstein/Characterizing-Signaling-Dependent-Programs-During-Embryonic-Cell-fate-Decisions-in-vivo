@@ -19,38 +19,38 @@ In a preliminary experiment, I dissected and individually cultured ten E7.5 mous
 To execute the program, use:
 
 ```python
-python bmp_response.py <metadata> <expression_matrix>
+python .\bmp_response.py
 ```
-
-* `metadata` - The name of the file containig the metadata information [.csv]
-* `expression_matrix` - The name of the file containig the gene expression matrix [.csv]
 
 ### User Input
 
 Upon running the program, the graphical user interface (GUI) prompts users for:
 
-1. Samples to compare.
-2. Minimum gene expression threshold.
-3. Minimum fold change threshold.
+1. `Fold change`: Controls the threshold for fold change of gene expression.
+2. `Minimal expression`: Sets the minimum expression level for genes to be included
+3. `Minimal border`:  Minimal value for the heatmap color scale.
+4. `Maximal border`:  Maximal value for the heatmap color scale.
+5. `Regulation`: genes that show Up and Downregulated, Upregulated, Downregulated in respect to control.
+6. `Save heatmap`: saves a .jpeg of the current heatmap display.
+7. `Generate PCA`: generate a PCA of the wildtype atlas over the current genes display and saves a .jpeg.
+
+* all explained within the GUI for convinience
 
 ### Output
 
 The output is an interactive GUI featuring:
 
-* Differential gene expression plots between selected samples.
-* Interactive UMAP projections of results in 3D.
+* Heatmap visualization of differentially expressed genes in response to BMP4.
+* Optional saving of the heatmap as a .jpeg
+* Optional saving of the PCA plot as a .jpeg - the PCA will represent the PC distribution over the selecter genes.
 
 ### Dependencies
 
-All required packages are listed in requirements.txt. Install them using:
-
-```python
-pip install -r requirements.txt
-```
+The program automatically installs all required packages listed in `requirements.txt`. If any packages are missing from your environment, the program will prompt for installation during execution.
 
 ### Testing
 
-Test the program using pytest.
+Test the program using `pytest`.
 
 ## Acknowledgment
 
