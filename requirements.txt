@@ -5,3 +5,10 @@ matplotlib
 scipy
 plotly
 mpl_toolkits
+pytest-mock
+pytest
+subprocess
+tkinter 
+sklearn
+traceback
+argparse

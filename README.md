@@ -19,7 +19,7 @@ In a preliminary experiment, I dissected and individually cultured ten E7.5 mous
 To execute the program, use:
 
 ```python
-python .\bmp_response.py
+python .\bmp_response.py --gui [optional]
 ```
 
 ### User Input
